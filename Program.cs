@@ -46,20 +46,19 @@ namespace Funcionarios_Lista
 
 
             Console.WriteLine("Entre com o Codigo do empregado para aumentar o salário:");
-            int cd_aumento = int.Parse(Console.ReadLine());
+            int cd_funcionario = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Entre com o percentual para aumentar o salário:");
             double percentual_aumento = double.Parse(Console.ReadLine());
 
 
-            foreach (Funcionario func in funcionario)
+            Funcionario emp = funcionario.Find(x => x.Id == cd_funcionario);
+            if (emp != null)
             {
-
-                if (func.Id == cd_aumento)
-                {
-                    func.AumentaSalario(percentual_aumento);
-                }
+                Console.Write("Enter the percentage: ");
+                emp.AumentaSalario(percentual_aumento);
             }
+
 
             Console.WriteLine("\nFuncionários: -------------");
             Console.WriteLine("---------------------------");

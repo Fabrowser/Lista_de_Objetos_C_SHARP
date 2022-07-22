@@ -11,6 +11,13 @@ namespace Funcionarios_Lista
 
         public double Salario { get; set; }
 
+        public Funcionario(int id, string nome, double salario)
+        {
+            Id = id;
+            Nome = nome;
+            Salario = salario;
+        }
+
 
         public void AumentaSalario(double perc)
         {

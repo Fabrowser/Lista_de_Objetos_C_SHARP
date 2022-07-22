@@ -9,7 +9,7 @@ namespace Funcionarios_Lista
         public int Id { get; set; }
         public string Nome { get; set; }
 
-        public double Salario { get; set; }
+        public double Salario { get; private set; }
 
         public Funcionario(int id, string nome, double salario)
         {
